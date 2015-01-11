@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/CartoonTea/github-api-blend",
   "dependencies": {
-    "express": "^4.10.7"
+    "express": "^4.10.7",
+    "github": "^0.2.3"
   }
 }
