@@ -8,6 +8,7 @@
     "gulp": "^3.8.10"
   },
   "scripts": {
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/CartoonTea/github-api-blend/issues"
   },
-  "homepage": "https://github.com/CartoonTea/github-api-blend"
+  "homepage": "https://github.com/CartoonTea/github-api-blend",
+  "dependencies": {
+    "express": "^4.10.7"
+  }
 }
