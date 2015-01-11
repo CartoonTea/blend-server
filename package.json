@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A taste test of the Github API",
   "main": "index.js",
-  "dependencies": {
-    "gulp": "^3.8.10"
-  },
   "devDependencies": {
     "gulp": "^3.8.10"
   },
