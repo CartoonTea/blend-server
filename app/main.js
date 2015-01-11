@@ -4,7 +4,7 @@ var app = express();
 app.use('/static', express.static(__dirname + '/static'));
 
 app.get('/', function (req, res) {
-  res.send('hello world');
+  res.sendfile(__dirname + '/static/index.html');
 });
 
 app.post('/callback', function(req, res) {
