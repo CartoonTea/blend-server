@@ -1,13 +1,14 @@
 var express = require('express');
 var app = express();
+var env = 
 
 app.use('/static', express.static(__dirname + '/static'));
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/static/index.html');
+  res.sendFile(__dirname + '/static/index.html');
 });
 
-app.post('/callback', function(req, res) {
+app.get('/callback', function(req, res) {
 
 });
 

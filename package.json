@@ -5,7 +5,8 @@
   "main": "index.js",
   "devDependencies": {
     "del": "^1.1.1",
-    "gulp": "^3.8.10"
+    "gulp": "^3.8.10",
+    "run-sequence": "^1.0.2"
   },
   "scripts": {
     "start": "node build/main.js",
@@ -23,6 +24,7 @@
   "homepage": "https://github.com/CartoonTea/github-api-blend",
   "dependencies": {
     "express": "^4.10.7",
-    "github": "^0.2.3"
+    "github": "^0.2.3",
+    "gulp-rename": "^1.2.0"
   }
 }
