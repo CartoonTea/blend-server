@@ -9,6 +9,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/callback', function(req, res) {
+    req.query.code
+    
 
 });
 
