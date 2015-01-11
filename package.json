@@ -4,6 +4,7 @@
   "description": "A taste test of the Github API",
   "main": "index.js",
   "devDependencies": {
+    "del": "^1.1.1",
     "gulp": "^3.8.10"
   },
   "scripts": {
