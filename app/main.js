@@ -1,6 +1,11 @@
 var http = require('http');
 var express = require('express');
 var app = express();
+var env = require('./env.json');
+var github = require('octonode');
+
+github.auth.config({id: env.client_id,
+secret: env.client_secret});
 
 app.use('/static', express.static(__dirname + '/static'));
 
@@ -10,37 +15,17 @@ app.get('/', function (req, res) {
 
 app.get('/callback', function(req, res) {
     var code = req.query.code;
-    var body = {
-        client_id: env.client_id,
-        client_secret: env.client_secret,
-        code: code
-    };
+    github.auth.login(code, function (err, token) {
+        console.log(token);
+    });
+});
 
-    var opt = {
-        host: 'https://github.com/login/oauth/access_token',
-        path: '/',
-        port: '3000',
-        method: 'POST'
-    };
+app.get('/repositories', function (req, res) {
+    //TODO
+});
 
-    var cb = function(response) {
-        var data = '';
-
-        response.on('data', function (chunk) {
-            data += chunk;
-        });
-
-        response.on('end', function () {
-            var username = '';
-            var access_token = '';
-            console.log(data);
-        });
-    }
-    var req_ = http.request(opt, cb);
-    req_.write(JSON.stringify(body));
-    req_.end();
-    
-
+app.get('/repositories/:repo/labels', function (req, res) {
+    //TODO
 });
 
 app.listen(3000);
