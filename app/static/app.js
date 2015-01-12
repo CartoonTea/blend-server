@@ -1,6 +1,7 @@
 angular
   .module('blend-web', [
-    'ui.router'
+    'ui.router',
+    'blendConstants'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
